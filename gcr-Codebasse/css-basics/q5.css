@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8fafc;
+    padding: 50px 20px;
+}
+
+.pricing-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.header-title {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #0f172a;
+}
+
+/* Equal Columns Flexbox */
+.pricing-grid {
+    display: flex;
+    gap: 30px;
+    align-items: stretch; /* Equal height */
+}
+
+.plan-card {
+    flex: 1;
+    background-color: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 35px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    position: relative;
+    /* Smooth CSS Transitions */
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Enlargement & Background Effect */
+.plan-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    background-color: #f1f5f9;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Highlighted Popular Plan */
+.plan-card.popular {
+    border: 2px solid #2563eb;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.15);
+}
+
+.badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #2563eb;
+    color: white;
+    padding: 4px 12px;
+    font-size: 0.8rem;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.plan-card h2 {
+    font-size: 1.5rem;
+    color: #1e293b;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #0f172a;
+    margin-bottom: 25px;
+}
+
+.price span {
+    font-size: 1rem;
+    color: #64748b;
+}
+
+.features {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.features li {
+    padding: 10px 0;
+    border-bottom: 1px solid #f1f5f9;
+    color: #475569;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #0f172a;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #334155;
+}
+
+.btn-popular {
+    background-color: #2563eb;
+}
+
+.btn-popular:hover {
+    background-color: #1d4ed8;
+}

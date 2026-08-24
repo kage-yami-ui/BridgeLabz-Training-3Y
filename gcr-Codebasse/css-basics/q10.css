@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333333;
+    background-color: #f4f6f9;
+}
+
+/* Sticky Header using RGBA color */
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: rgba(15, 23, 42, 0.95);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    z-index: 1000;
+}
+
+.logo {
+    color: #38bdf8;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.navbar nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+/* Hero Section with Relative Positioning Overlay */
+.hero-section {
+    position: relative;
+    height: 70vh;
+    background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px 60px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+}
+
+.hero-overlay h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+/* About Section 2-Column Layout */
+.about-section {
+    display: flex;
+    gap: 40px;
+    padding: 80px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.about-text, .about-img {
+    flex: 1;
+}
+
+.about-img img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Services Section Box Model and Outline Demonstrations */
+.services-section {
+    background-color: #ffffff;
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.services-grid {
+    display: flex;
+    gap: 25px;
+    max-width: 1100px;
+    margin: 40px auto 0;
+}
+
+.service-box {
+    flex: 1;
+    padding: 30px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    outline: 2px solid transparent;
+    transition: outline 0.3s;
+}
+
+.service-box:hover {
+    outline: 2px solid #38bdf8;
+}
+
+/* Contact Form Section */
+.contact-section {
+    padding: 80px 40px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.master-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.master-form input, .master-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.master-form button {
+    padding: 12px;
+    background-color: #0f172a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Footer */
+.footer {
+    background-color: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive Alignment (< 768px) */
+@media (max-width: 768px) {
+    .about-section, .services-grid {
+        flex-direction: column;
+    }
+}
