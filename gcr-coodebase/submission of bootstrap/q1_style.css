@@ -1,9 +1,0 @@
-/* Q1 Custom Styles */
-body {
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    background-color: #f8f9fa;
-}
-
-.navbar-brand {
-    letter-spacing: 0.5px;
-}
