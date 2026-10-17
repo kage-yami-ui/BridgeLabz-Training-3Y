@@ -1,0 +1,7 @@
+/* Q7 Custom Badge Layout */
+.list-group-item {
+    transition: background-color 0.2s ease;
+}
+.list-group-item:hover {
+    background-color: #f8f9fa;
+}
