@@ -1,0 +1,11 @@
+/* Q10 Carousel Custom Height & Responsiveness */
+.carousel-img {
+    height: 420px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .carousel-img {
+        height: 260px;
+    }
+}
