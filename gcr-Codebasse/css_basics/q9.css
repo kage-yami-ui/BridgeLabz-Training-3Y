@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f7f4eb; /* Newspaper vintage tone background */
+    color: #111111;
+    padding: 40px 20px;
+}
+
+.newspaper-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border: 1px solid #d3d3d3;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Headline spanning across columns */
+.headline {
+    font-family: Georgia, serif;
+    font-size: 2.8rem;
+    text-align: center;
+    text-transform: uppercase;
+    border-top: 3px solid #111;
+    border-bottom: 2px solid #111;
+    padding: 15px 0;
+    margin-bottom: 30px;
+    column-span: all; /* CSS Column Span */
+}
+
+/* Multi-column layout */
+.newspaper-columns {
+    column-count: 3;
+    column-gap: 35px;
+    column-rule: 1px solid #ddd;
+    text-align: justify; /* Justified text */
+    line-height: 1.6;
+    font-size: 1.05rem;
+}
+
+/* Image floated left inside text column */
+.float-img {
+    float: left;
+    margin: 0 15px 10px 0;
+    border: 1px solid #444;
+}
+
+p {
+    margin-bottom: 15px;
+}

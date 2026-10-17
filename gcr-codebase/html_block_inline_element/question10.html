@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Travel Location Selection</title>
+</head>
+<body>
+    <h1>Select Your Favorite Destination</h1>
+
+    <form>
+        <p>
+            <label for="country">Country:</label>
+            <select id="country" name="country">
+                <option value="usa">USA</option>
+                <option value="japan" selected>Japan</option>
+                <option value="france">France</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="state">State/Region:</label>
+            <select id="state" name="state">
+                <option value="california">California</option>
+                <option value="kanto" selected>Kanto</option>
+                <option value="ile-de-france">Île-de-France</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="city">City:</label>
+            <select id="city" name="city">
+                <option value="tokyo" selected>Tokyo</option>
+                <option value="paris">Paris</option>
+                <option value="los-angeles">Los Angeles</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="place">Favorite Tourist Place:</label>
+            <select id="place" name="place">
+                <option value="shinjuku">Shinjuku Gyoen</option>
+                <option value="skytree" selected>Tokyo Skytree</option>
+                <option value="eiffel">Eiffel Tower</option>
+            </select>
+        </p>
+    </form>
+
+    <p>Summary of pre-selected choice: You are looking at visiting the <strong>Tokyo Skytree</strong> in <strong>Tokyo, Kanto, Japan</strong>.</p>
+</body>
+</html>

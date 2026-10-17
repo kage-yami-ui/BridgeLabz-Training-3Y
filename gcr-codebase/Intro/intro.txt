@@ -1,0 +1,131 @@
+1. Explain the Difference Between Frontend, Backend, and Full-Stack Development With Suitable Real-World Examples
+
+Web development is mainly divided into frontend development, backend development, and full-stack development. These three areas work together to create complete websites and web applications.
+Frontend development refers to the part of a website that users can see and interact with. It is also known as client-side development. Frontend developers create the layout, design, buttons, menus, forms, images, animations, and other elements that appear on the screen. The main technologies used in frontend development are HTML, CSS, and JavaScript. Modern frontend development also uses technologies and frameworks such as React, Angular, and Vue.
+For example, on an online shopping website, the homepage, product images, search bar, navigation menu, product cards, Add to Cart button, and checkout interface are part of the frontend.
+Backend development refers to the server-side part of a web application. It is responsible for processing requests, applying business logic, managing authentication, communicating with databases, and providing data to the frontend. Common backend technologies include Java, Python, PHP, JavaScript with Node.js, and C#.
+For example, when a user logs into an online shopping website, the backend receives the username and password, checks the information against the database, and sends a response indicating whether the login was successful.
+Full-stack development involves both frontend and backend development. A full-stack developer can work on the user interface, server-side logic, databases, APIs, and sometimes deployment and server configuration.
+For example, in an online banking application, a full-stack developer may create the login page and dashboard using frontend technologies, develop the transaction processing system using backend technologies, and connect the application to a database containing customer and transaction information.
+In simple terms, the frontend is what the user sees, the backend is what works behind the scenes, and full-stack development involves working with both.
+
+
+2. Create a Simple Diagram Showing How the Client-Server Model Works in Web Architecture
+
+The client-server model is a basic architecture in which a client requests information or a service from a server, and the server processes the request and sends a response.
+The client is usually a web browser such as Google Chrome, Mozilla Firefox, Microsoft Edge, or Safari. The server is a computer or system that receives requests and provides the required resources or services.
+The working process is simple. First, the user enters a website address in the browser. The browser sends a request to the web server using HTTP or HTTPS. The server receives and processes the request. If necessary, the server communicates with a database to retrieve or store information. The server then sends a response back to the browser, and the browser displays the requested webpage.
+For example, when a user visits an online shopping website, the browser requests product information from the server. The server retrieves the required product information from the database and sends it back to the browser.
+The client-server model allows users to access web applications efficiently while keeping server-side processing and data management separate from the user interface.
+
+
+3. Describe How a Browser Requests and Displays a Web Page From a Web Server
+
+When a user opens a website, the browser performs several steps before displaying the webpage.
+First, the user enters a URL such as https://www.example.com into the browser's address bar.
+The browser then performs a DNS lookup. DNS stands for Domain Name System. DNS converts the human-readable domain name into the IP address of the server where the website is hosted.
+After obtaining the IP address, the browser establishes a connection with the web server. When HTTPS is used, a secure connection is established using TLS.
+The browser then sends an HTTP or HTTPS request to the server. The request tells the server which resource the browser wants. For example, the browser may request an HTML file.
+The web server receives the request and processes it. If the requested information is stored in a database, the server may communicate with the database to retrieve the required information.
+The server then sends an HTTP response back to the browser. The response may contain HTML, CSS, JavaScript, images, and other resources.
+The browser reads and processes the HTML and creates the Document Object Model, commonly called the DOM. It then processes the CSS to determine the appearance and layout of the webpage.
+The browser also downloads and executes JavaScript files when required. JavaScript can add interactive functionality to the webpage.
+Finally, the browser's rendering engine calculates the layout, paints the elements, and displays the completed webpage on the screen.
+Therefore, the complete process involves entering the URL, DNS lookup, establishing a connection, sending a request, receiving a response, processing HTML, CSS and JavaScript, and finally rendering the webpage.
+
+
+4. Identify and List the Tools Required to Set Up a Web Development Environment. Explain the Purpose of Each
+
+A web development environment contains different tools that help developers create, test, debug, and manage websites and web applications.
+The first important tool is a code editor. A code editor is used to write and modify source code. Visual Studio Code is one of the most commonly used code editors for web development. It supports HTML, CSS, JavaScript, and many other programming languages. It also provides features such as syntax highlighting, code completion, debugging, extensions, and an integrated terminal.
+A web browser is another essential tool. Browsers such as Google Chrome, Mozilla Firefox, and Microsoft Edge are used to run and test webpages. Browsers also provide Developer Tools for inspecting HTML and CSS, debugging JavaScript, checking network requests, and analyzing website performance.
+HTML is required to create the structure of a webpage. It defines elements such as headings, paragraphs, images, links, forms, and buttons.
+CSS is used to control the appearance of webpages. It is responsible for colors, fonts, spacing, positioning, layouts, animations, and responsive design.
+JavaScript is used to add functionality and interactivity to webpages. It can respond to user actions, validate forms, modify webpage content, communicate with servers, and create interactive applications.
+Git is a version control system used to track changes in source code. It allows developers to create branches, save versions of their projects, compare changes, and restore previous versions.
+GitHub is an online platform used to store and manage Git repositories. It allows developers to back up projects, collaborate with other developers, and share their code.
+Node.js is a JavaScript runtime that allows JavaScript to run outside a web browser. It is commonly used for backend development and development tools.
+npm, or Node Package Manager, is used to install and manage JavaScript packages and dependencies.
+A local development server allows developers to test websites on their own computer before publishing them online. Live Server, Apache, and Node.js development servers are examples.
+A database management system is required when a web application needs to store information. Examples include MySQL, PostgreSQL, MongoDB, and Oracle Database.
+Together, these tools provide the basic environment required for developing, testing, debugging, and maintaining web applications.
+
+
+5. Explain What a Web Server Is and Give Examples of Commonly Used Servers
+
+A web server is a software system that receives requests from clients, such as web browsers, and sends appropriate responses to them. The term web server can also refer to the computer on which the web-server software runs.
+Web servers primarily use HTTP and HTTPS protocols to communicate with web browsers.
+When a user enters a website address, the browser sends a request to the web server. The server processes the request and sends the requested resources back to the browser. These resources may include HTML files, CSS files, JavaScript files, images, videos, and other types of data.
+Web servers can also work with application servers and databases to provide dynamic content.
+Apache HTTP Server is one of the most widely used open-source web servers. It can serve static websites and can work with different server-side technologies.
+Nginx is another popular web server. It is known for high performance and is commonly used for serving static files, reverse proxying, load balancing, and handling large numbers of connections.
+Microsoft Internet Information Services, commonly known as IIS, is a web server developed by Microsoft. It is mainly used in Windows environments and is commonly associated with Microsoft technologies such as ASP.NET.
+LiteSpeed is another high-performance web server that is used to host websites and web applications.
+Node.js is not traditionally classified as a standalone web server like Apache or Nginx, but it provides functionality for creating HTTP servers and running server-side JavaScript applications.
+The main purpose of a web server is to receive requests, process or locate the required resources, and return responses to clients.
+
+
+6. Define the Roles of a Frontend Developer, Backend Developer, and Database Administrator in a Project
+
+A frontend developer is responsible for creating the part of a web application that users interact with directly. The frontend developer uses technologies such as HTML, CSS, and JavaScript to create webpages and interfaces.
+The responsibilities of a frontend developer include creating page layouts, designing user interfaces, implementing buttons and forms, making websites responsive, connecting the frontend with APIs, testing websites on different browsers, and improving the overall user experience.
+For example, in a food delivery application, the restaurant list, food menu, search bar, cart page, and checkout interface are developed by frontend developers.
+A backend developer is responsible for the server-side functionality of a web application. The backend developer handles business logic, user authentication, data processing, APIs, and communication with databases.
+The responsibilities of a backend developer include developing server-side programs, creating APIs, processing requests, implementing authentication, validating data, communicating with databases, handling errors, and maintaining server-side security.
+For example, when a customer places an order in a food delivery application, the backend processes the order, calculates the price, stores the order information, and communicates with the database.
+A Database Administrator, commonly known as a DBA, is responsible for managing and maintaining databases. The DBA ensures that data is stored securely, efficiently, and reliably.
+The responsibilities of a DBA include creating databases, managing tables and relationships, managing database users and permissions, performing backups, restoring data when required, monitoring database performance, optimizing queries, maintaining security, and ensuring data integrity.
+For example, in a college management system, the DBA may manage databases containing student information, teacher information, courses, attendance, examination results, and other academic records.
+These three roles work together to create a complete and reliable web application.
+
+
+7. Install VS Code and Configure It for HTML, CSS, and JavaScript Development
+
+Visual Studio Code, commonly called VS Code, is a popular source-code editor used for web development.
+First, VS Code should be downloaded and installed on the computer. After installation, the application can be opened from the Start menu or desktop.
+A project folder should then be created. For example, a folder named "WebDevelopment" can be created.
+Inside the project folder, three files can be created: index.html, style.css, and script.js.
+The index.html file is used to create the structure of the webpage. The style.css file is used to style the webpage, while the script.js file is used to add JavaScript functionality.
+A basic HTML file can contain a heading, paragraph, and button. The HTML file can also contain links to the CSS and JavaScript files.
+The CSS file can be used to change the font, color, alignment, spacing, and other visual properties of the webpage.
+The JavaScript file can be used to add functionality such as displaying an alert message when a button is clicked.
+VS Code also provides an Extensions section. The Live Server extension can be installed to run webpages through a local development server. The Prettier extension can be used to format code automatically.
+After creating the files and installing the required extensions, the HTML file can be opened using Live Server. The webpage will then open in the browser and can be tested.
+For the practical part of the assignment, a screenshot should be taken after completing the VS Code setup. The screenshot should show the VS Code window, project files, and preferably the webpage running in the browser.
+
+
+8. Explain the Difference Between Static and Dynamic Websites. Provide an Example of Each
+
+A static website is a website in which the content is generally fixed and stored in files such as HTML, CSS, JavaScript, and images. The same basic content is usually delivered to users unless a developer manually changes the files.
+Static websites are generally simple, fast, and easy to host. They are suitable for websites where content does not change frequently.
+A personal portfolio website is an example of a static website. It may contain information about the developer, skills, projects, education, and contact details.
+A dynamic website is a website whose content can change according to user interaction, database information, time, or other conditions. Dynamic websites generally use backend programming and databases.
+For example, an online shopping website is dynamic. Products, prices, user accounts, shopping carts, orders, and product availability can change regularly. The server retrieves the appropriate information from a database and sends it to the user.
+Static websites are generally easier to develop and maintain for simple purposes. Dynamic websites are more complex but are suitable for applications requiring databases, user accounts, personalization, and frequently changing information.
+Therefore, a static website mainly provides fixed content, while a dynamic website can generate or retrieve changing content based on data and user requirements.
+
+
+9. Research and List Five Web Browsers. Explain How Rendering Engines Differ Between Them
+
+A web browser is a software application used to access, process, and display websites. Browsers use rendering engines to process HTML and CSS and convert them into the visual webpage displayed on the screen.
+The five commonly used web browsers are Google Chrome, Mozilla Firefox, Microsoft Edge, Apple Safari, and Opera.
+Google Chrome uses the Blink rendering engine. Blink is part of the Chromium project. Chrome uses the V8 JavaScript engine for executing JavaScript.
+Mozilla Firefox uses the Gecko rendering engine. Gecko is developed by Mozilla. Firefox uses the SpiderMonkey JavaScript engine.
+Microsoft Edge uses the Blink rendering engine in its modern Chromium-based version. It also uses the V8 JavaScript engine.
+Apple Safari uses the WebKit rendering engine. WebKit is primarily developed by Apple and is widely used in Apple's browser ecosystem. Safari uses JavaScriptCore for JavaScript execution.
+Opera is based on Chromium and therefore uses the Blink rendering engine. It also uses the V8 JavaScript engine.
+Rendering engines are responsible for interpreting HTML and CSS, calculating webpage layout, and displaying the final content on the screen.
+Different rendering engines can have differences in how they implement web standards, CSS features, layouts, performance optimizations, and browser-specific functionality. Therefore, a webpage may sometimes appear or behave slightly differently in different browsers.
+It is important for web developers to test websites on multiple browsers to ensure compatibility and a consistent user experience.
+It should also be noted that a rendering engine and a JavaScript engine are different. The rendering engine handles the visual rendering of the webpage, while the JavaScript engine executes JavaScript code.
+
+
+10. Draw a Labeled Diagram Showing the Basic Web Architecture Flow — Client, Server, Database, and APIs
+
+A modern web application generally consists of a client, server, database, and APIs.
+The client is normally a web browser or mobile application through which the user interacts with the application.
+The client sends an HTTP or HTTPS request to an API. The API provides a structured way for the client and server to communicate.
+The server receives the request and performs the required processing. It contains the backend logic and business rules of the application.
+When the server needs stored information, it communicates with the database. The database stores information such as user accounts, products, orders, marks, messages, or other application data.
+The server can also communicate with external APIs. For example, a web application might use an external payment API, map API, weather API, email service, or authentication service.
+After processing the request, the server sends a response through the API. The client receives the response and displays the appropriate information to the user.

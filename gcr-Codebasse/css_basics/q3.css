@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #0f172a;
+}
+
+/* Flexbox Layout */
+.team-grid {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* Base Card Box Model, Borders, and Shadow */
+.card {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 30px;
+    margin: 10px 0;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.card img {
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    font-size: 1.3rem;
+    color: #1e293b;
+    margin-bottom: 5px;
+}
+
+.card .role {
+    display: inline-block;
+    font-weight: 600;
+    color: #2563eb;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.card p {
+    color: #64748b;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+/* Highlighted Team Lead Card */
+.card.team-lead {
+    background-color: #eff6ff;
+    border: 2px dashed #2563eb;
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.15);
+}
+
+/* Responsive Layout (< 600px) */
+@media (max-width: 600px) {
+    .team-grid {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background-color: #fcfbf9;
+    color: #292929;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.article-container {
+    max-width: 750px;
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.article-title {
+    font-family: sans-serif;
+    font-size: 2.5rem;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.subheading {
+    font-family: sans-serif;
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+/* Paragraph spacing */
+p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* Pseudo-element ::first-letter styling */
+p::first-letter {
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #b91c1c;
+    float: left;
+    line-height: 1;
+    padding-right: 8px;
+}
+
+/* Pseudo-element ::first-line styling */
+p::first-line {
+    font-weight: bold;
+    color: #111827;
+}
+
+/* Custom Highlight style for <mark> */
+mark {
+    background-color: #fef08a;
+    color: #854d0e;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+/* Blockquote styling with left border and background */
+.featured-quote {
+    border-left: 5px solid #b91c1c;
+    background-color: #fef2f2;
+    padding: 20px;
+    margin: 30px 0;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #991b1b;
+}
