@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Dynamic Object Updater</title>
+<style>body{font-family:Arial;max-width:520px;margin:35px auto;padding:20px}label{display:block;margin-top:14px}input{box-sizing:border-box;width:100%;padding:9px;margin-top:5px}button{margin-top:15px;padding:10px}pre{background:#f3f3f3;padding:12px}</style></head>
+<body><h1>Edit User</h1><form id="userForm"><label>Name<input name="name" required></label><label>Email<input name="email" type="email" required></label><label>Age<input name="age" type="number" min="0" required></label><button>Update User</button></form><h2>Updated object</h2><pre id="output"></pre>
+<script>
+const user={name:"John",email:"john@mail.com",age:21},form=document.getElementById("userForm"),output=document.getElementById("output");
+function renderUser(){output.textContent=JSON.stringify(user,null,2);}
+form.elements.name.value=user.name;form.elements.email.value=user.email;form.elements.age.value=user.age;renderUser();
+form.addEventListener("submit",e=>{e.preventDefault();user.name=form.elements.name.value.trim();user.email=form.elements.email.value.trim();user.age=Number(form.elements.age.value);renderUser();});
+</script></body></html>

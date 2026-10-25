@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Student Form Validator</title>
+<style>body{font-family:Arial;max-width:520px;margin:35px auto;padding:20px}label{display:block;margin-top:14px}input{box-sizing:border-box;width:100%;padding:9px;margin-top:5px;border:2px solid #aaa}input.valid{border-color:green}input.invalid{border-color:red}.error{color:red;min-height:18px}button{margin-top:15px;padding:10px}#result{color:green}</style></head>
+<body><h1>Student Registration</h1><form id="studentForm" novalidate>
+<label>Name<input id="name" name="name"></label><div class="error" id="nameError"></div>
+<label>Email<input id="email" name="email" type="email"></label><div class="error" id="emailError"></div>
+<label>Phone (10 digits)<input id="phone" name="phone" inputmode="numeric"></label><div class="error" id="phoneError"></div>
+<label>Password<input id="password" name="password" type="password"></label><div class="error" id="passwordError"></div>
+<button>Validate</button><p id="result" role="status"></p></form>
+<script>
+const rules={name:/^[A-Za-z]+$/,email:/^[^\s@]+@[^\s@]+\.[^\s@]+$/,phone:/^\d{10}$/,password:/^(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).+$/};
+const errors={name:"Use alphabets only.",email:"Enter a valid email.",phone:"Enter exactly 10 digits.",password:"Include uppercase, number, and special character."};
+document.getElementById("studentForm").addEventListener("submit",e=>{e.preventDefault();let ok=true;for(const key in rules){const el=document.getElementById(key),valid=rules[key].test(el.value.trim());el.classList.toggle("valid",valid);el.classList.toggle("invalid",!valid);document.getElementById(key+"Error").textContent=valid?"":errors[key];if(!valid)ok=false;}document.getElementById("result").textContent=ok?"Registration details are valid.":"Please correct the highlighted fields.";});
+</script></body></html>

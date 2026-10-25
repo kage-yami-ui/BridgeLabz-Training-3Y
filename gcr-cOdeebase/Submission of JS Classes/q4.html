@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Custom Form Builder</title>
+<style>body{font-family:Arial;max-width:520px;margin:35px auto;padding:20px}label{display:block;margin-top:14px}input,textarea{box-sizing:border-box;width:100%;padding:9px;margin-top:5px}button{margin-top:15px;padding:10px}pre{background:#f3f3f3;padding:12px;white-space:pre-wrap}</style></head>
+<body><h1>Dynamic Form Builder</h1><div id="formContainer"></div><h2>Submitted values</h2><pre id="output">Submit the form to see values.</pre>
+<script>
+class FormBuilder {
+  constructor(fields,container){this.fields=fields;this.container=container;this.render();}
+  render(){const form=document.createElement("form");this.fields.forEach((field,i)=>{const label=document.createElement("label");label.htmlFor="field-"+i;label.textContent=field.label;const input=field.type==="textarea"?document.createElement("textarea"):document.createElement("input");if(field.type!=="textarea")input.type=field.type;input.id="field-"+i;input.name=field.name;input.required=!!field.required;form.append(label,input);});const button=document.createElement("button");button.type="submit";button.textContent="Submit";form.append(button);form.addEventListener("submit",e=>{e.preventDefault();document.getElementById("output").textContent=JSON.stringify(this.getFormData(),null,2);});this.container.replaceChildren(form);}
+  getFormData(){return Object.fromEntries(new FormData(this.container.querySelector("form")).entries());}
+}
+new FormBuilder([{type:"text",label:"Username",name:"username",required:true},{type:"email",label:"Email",name:"email",required:true},{type:"textarea",label:"About you",name:"about"}],document.getElementById("formContainer"));
+</script></body></html>

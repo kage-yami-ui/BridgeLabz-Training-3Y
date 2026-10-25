@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Movie Ticket Booking</title>
+<style>body{font-family:Arial;max-width:520px;margin:35px auto;padding:20px}label{display:block;margin-top:14px}input{box-sizing:border-box;width:100%;padding:9px;margin-top:5px}button{margin-top:15px;padding:10px}#ticket{margin-top:20px;padding:15px;border:1px dashed #555}.error{color:red}</style></head>
+<body><h1>Movie Ticket Booking</h1><form id="bookingForm" novalidate>
+<label>Name<input name="name" required></label><label>Email<input name="email" type="email" required></label><label>Seats (1–10)<input name="seats" type="number" min="1" max="10" required></label><button>Book Ticket</button><p id="message" class="error" role="status"></p></form><div id="ticket" hidden></div>
+<script>
+const form=document.getElementById("bookingForm");
+form.addEventListener("submit",e=>{e.preventDefault();const name=form.elements.name.value.trim(),email=form.elements.email.value.trim(),seatsText=form.elements.seats.value.trim(),seats=Number(seatsText);const vn=/^[A-Za-z ]+$/.test(name),ve=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email),vs=/^\d+$/.test(seatsText)&&seats>=1&&seats<=10;const msg=document.getElementById("message");if(!vn||!ve||!vs){msg.textContent=[!vn?"Name must contain letters and spaces only.":"",!ve?"Enter a valid email.":"",!vs?"Seats must be a whole number from 1 to 10.":""].filter(Boolean).join(" ");document.getElementById("ticket").hidden=true;return;}msg.textContent="";const booking={name,email,seats},ticket=document.getElementById("ticket");ticket.replaceChildren();const h=document.createElement("h2");h.textContent="Booking Confirmed";ticket.append(h);Object.entries(booking).forEach(([k,v])=>{const p=document.createElement("p");p.textContent=k[0].toUpperCase()+k.slice(1)+": "+v;ticket.append(p);});ticket.hidden=false;});
+</script></body></html>
