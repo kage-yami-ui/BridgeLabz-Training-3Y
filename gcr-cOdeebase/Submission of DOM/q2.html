@@ -1,0 +1,9 @@
+<!-- Q2_live_character_counter -->
+
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Character Counter</title><style>body{font:16px Arial;max-width:600px;margin:40px auto;padding:0 16px}textarea{box-sizing:border-box;width:100%;min-height:150px;padding:12px}#counter{font-weight:bold;color:green}.warning{color:#c69a00!important}.limit{color:red!important}</style></head><body><h1>Live Character Counter</h1><textarea id="message" placeholder="Maximum 100 characters"></textarea><p id="counter">100 characters remaining</p><button id="reset">Reset</button><script>
+const area=document.querySelector("#message"),counter=document.querySelector("#counter");const max=100;
+function update(){const left=max-area.value.length;counter.textContent=`${left} characters remaining`;counter.classList.toggle("warning",left<=20&&left>0);counter.classList.toggle("limit",left===0);}
+area.addEventListener("beforeinput",e=>{if(e.inputType.startsWith("insert")&&e.data!==null&&area.value.length+e.data.length>max)e.preventDefault();});
+area.addEventListener("input",()=>{if(area.value.length>max)area.value=area.value.slice(0,max);update();});
+document.querySelector("#reset").addEventListener("click",()=>{area.value="";update();area.focus();});update();
+</script></body></html>

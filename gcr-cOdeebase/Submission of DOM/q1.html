@@ -1,0 +1,15 @@
+<!-- Q1_dynamic_product_list_manager -->
+
+
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Product List Manager</title>
+<style>body{font:16px Arial;max-width:650px;margin:40px auto;padding:0 16px}form{display:flex;gap:8px}input{padding:10px;flex:1}button{padding:8px 12px;cursor:pointer}li{display:flex;gap:8px;align-items:center;margin:10px 0}.product-name{flex:1}</style></head><body>
+<h1>Dynamic Product List Manager</h1><form id="product-form"><input id="product-input" placeholder="Product name" required><button>Add Product</button></form><ul id="product-list"></ul>
+<script>
+const form=document.querySelector("#product-form"), input=document.querySelector("#product-input"), list=document.querySelector("#product-list");
+let activeEditor=null;
+function saveEditor(){if(!activeEditor)return;const {item,editor,label}=activeEditor;const value=editor.value.trim();if(value)label.textContent=value;else item.remove();if(label.isConnected)editor.replaceWith(label);activeEditor=null;}
+form.addEventListener("submit",e=>{e.preventDefault();const name=input.value.trim();if(!name)return;saveEditor();const li=document.createElement("li"),label=document.createElement("span");label.className="product-name";label.textContent=name;const edit=document.createElement("button");edit.type="button";edit.dataset.action="edit";edit.textContent="Edit";const del=document.createElement("button");del.type="button";del.dataset.action="delete";del.textContent="Delete";li.append(label,edit,del);list.append(li);input.value="";});
+list.addEventListener("click",e=>{const button=e.target.closest("button[data-action]");if(!button)return;const li=button.closest("li");if(button.dataset.action==="delete"){if(activeEditor?.item===li)activeEditor=null;li.remove();return;}saveEditor();const label=li.querySelector(".product-name");const editor=document.createElement("input");editor.value=label.textContent;label.replaceWith(editor);activeEditor={item:li,editor,label};editor.focus();editor.addEventListener("keydown",ev=>{if(ev.key==="Enter"){ev.preventDefault();saveEditor();}if(ev.key==="Escape"){editor.value=label.textContent;saveEditor();}});});
+document.addEventListener("click",e=>{if(activeEditor&&!activeEditor.item.contains(e.target))saveEditor();},true);
+</script></body></html>

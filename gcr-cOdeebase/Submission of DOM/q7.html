@@ -1,0 +1,6 @@
+<!-- Q7_mouse_path_coordinates -->
+
+
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mouse Coordinates</title><style>body{font:16px Arial;margin:30px}#box{width:400px;height:400px;max-width:90vw;max-height:90vw;position:relative;border:2px solid #333;background:#f2f5f8;overflow:hidden}#coords{font-family:monospace}.dot{position:absolute;width:12px;height:12px;background:red;border-radius:50%;transform:translate(-50%,-50%);pointer-events:none}</style></head><body><h1>Mouse Path &amp; Coordinates Logger</h1><p id="coords">clientX: —, clientY: —</p><div id="box" aria-label="Move mouse here and double-click to place a dot"></div><script>
+const box=document.querySelector("#box"),coords=document.querySelector("#coords");box.addEventListener("mousemove",e=>coords.textContent=`clientX: ${e.clientX}, clientY: ${e.clientY}`);box.addEventListener("dblclick",e=>{const rect=box.getBoundingClientRect(),dot=document.createElement("span");dot.className="dot";dot.style.left=`${e.clientX-rect.left}px`;dot.style.top=`${e.clientY-rect.top}px`;box.append(dot);});
+</script></body></html>

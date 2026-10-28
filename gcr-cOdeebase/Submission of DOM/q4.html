@@ -1,0 +1,5 @@
+<!-- Q4_theme_switcher -->
+
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Theme Switcher</title><style>body{font:16px Arial;padding:40px;transition:.2s}body[data-theme=light]{background:#fff;color:#222}body[data-theme=dark]{background:#202124;color:#f5f5f5}body[data-theme=blue]{background:#dceeff;color:#12345a}button{padding:10px 16px;margin:6px}</style></head><body data-theme="light" data-current-theme="light"><h1>Theme Switcher</h1><p>Choose a theme.</p><button data-theme-choice="light">Light</button><button data-theme-choice="dark">Dark</button><button data-theme-choice="blue">Blue</button><p id="status">Current theme: Light</p><script>
+document.querySelectorAll("[data-theme-choice]").forEach(button=>button.addEventListener("click",()=>{const theme=button.getAttribute("data-theme-choice");document.body.setAttribute("data-theme",theme);document.body.setAttribute("data-current-theme",theme);document.querySelector("#status").textContent=`Current theme: ${theme[0].toUpperCase()+theme.slice(1)}`;}));
+</script></body></html>
